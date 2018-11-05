@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node</title>
+</head>
+<body>
+	<h1 th:text="${node.name}">Node</h1>
+	<div>
+		<span th:text="#{parent}">Parent</span>:
+		<span th:text="${node.getParentName()}">Parent</span>
+		<a th:href="@{/element/} + ${node.id}">Link</a>
+		<div th:each="child : ${node.children}">
+			<span th:text="${child.name}">Child</span>
+			<span><a th:href="@{/element/} + ${child.id}">Link</a></span>
+		</div>
+	</div>
+	
+	
+</body>
+</html>
