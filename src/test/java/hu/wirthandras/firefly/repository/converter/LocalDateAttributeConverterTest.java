@@ -16,7 +16,7 @@ public class LocalDateAttributeConverterTest {
 	private static final int DAY = 1;
 	private static final int MONTH = 1;
 	private static final int YEAR = 2019;
-	private static final long dateTimestamp = 1546297200000l;
+	private static final long dateTimestamp = Date.valueOf(LocalDate.of(YEAR, MONTH, DAY)).getTime();
 	private LocalDateAttributeConverter converter;
 
 	@Before
