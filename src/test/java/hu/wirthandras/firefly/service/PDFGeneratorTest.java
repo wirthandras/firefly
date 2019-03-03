@@ -50,7 +50,7 @@ public class PDFGeneratorTest {
 	}
 	
 	@Test
-	public void testa() throws IOException {
+	public void testGenerate() throws IOException {
 		classToTest.addData(input);
 		Assert.assertNotNull(classToTest.generate());
 		
