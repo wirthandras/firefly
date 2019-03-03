@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title >Authorization</title>
+</head>
+<body>
+	<h1 th:text="#{authorization}">Authorization</h1>
+	<form th:action="@{/set}" th:object="${input}" method="post">
+		<span>Érvényes:</span>
+		<input type="text" name="valid" placeholder="ervenyes"><br>
+		<span>Hatályos:</span>
+		<input type="text" name="applicable" placeholder="hatalyos"><br>
+		<span>Feltetel</span>
+		<input type="text" name="condition" placeholder="feltetel"><br>
+		<span>meghatalmazott</span>
+		<input type="text" name="proxyPersonName" placeholder="meghatalmazott"><br>
+		<span>meghatalmazo</span>
+		<input type="text" name="authorizingPersonName" placeholder="meghatalmazo"><br>
+		<span>tanu1Name</span>
+		<input type="text" name="witness1Name" placeholder="tanu1Name"><br>
+		<span>tanu2Name</span>
+		<input type="text" name="witness2Name" placeholder="tanu2Name"><br>
+		<span>tanu1Address</span>
+		<input type="text" name="witness1Address" placeholder="tanu1Address"><br>
+		<span>tanu2Address</span>
+		<input type="text" name="witness2Address" placeholder="tanu2Address"><br>
+		
+		<button id="submit" type="submit" th:text="#{button.submit}">Submit</button>
+	</form>
+</body>
+</html>
