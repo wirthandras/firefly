@@ -32,17 +32,27 @@ public class PDFGenerator implements IGeneratorService {
 		PDDocument document = new PDDocument();
 		PDPage page = new PDPage();
 		document.addPage(page);
-		PDPageContentStream contentStream = new PDPageContentStream(document, page);
-		contentStream.beginText();
-		contentStream.setFont(PDType1Font.TIMES_ROMAN, 20);
 
-		drawTexts(contentStream);
+		draw(document, page);
 
-		contentStream.endText();
-		contentStream.close();
 		document.save(path.toFile());
 		document.close();
+
 		return path.toFile();
+	}
+
+	private void draw(PDDocument document, PDPage page) throws IOException {
+		try (PDPageContentStream pdpcs = new PDPageContentStream(document, page)) {
+
+			pdpcs.beginText();
+			pdpcs.setFont(PDType1Font.TIMES_ROMAN, 20);
+
+			drawTexts(pdpcs);
+
+			pdpcs.endText();
+			pdpcs.close();
+
+		}
 	}
 
 	private void drawTexts(PDPageContentStream contentStream) throws IOException {
