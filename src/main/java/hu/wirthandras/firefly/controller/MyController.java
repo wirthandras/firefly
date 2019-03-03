@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import hu.wirthandras.firefly.service.NodeCreatorService;
 
@@ -21,7 +20,7 @@ public class MyController {
 		return "node";
 	}
 	
-	@RequestMapping(value="/")
+	@GetMapping("/")
 	public String showIndex(Model model) {
 		model.addAttribute("id", service.randomId());
 		return "index";
