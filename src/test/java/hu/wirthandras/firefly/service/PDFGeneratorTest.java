@@ -11,7 +11,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import hu.wirthandras.firefly.controller.Input;
+import hu.wirthandras.firefly.domain.Input;
 
 public class PDFGeneratorTest {
 	

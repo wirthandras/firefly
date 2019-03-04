@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import org.springframework.stereotype.Service;
 
-import hu.wirthandras.firefly.controller.Input;
+import hu.wirthandras.firefly.domain.Input;
 
 @Service
 public interface IGeneratorService {

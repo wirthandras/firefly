@@ -11,7 +11,7 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.springframework.stereotype.Service;
 
-import hu.wirthandras.firefly.controller.Input;
+import hu.wirthandras.firefly.domain.Input;
 
 @Service
 public class PDFGenerator implements IGeneratorService {

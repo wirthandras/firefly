@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import hu.wirthandras.firefly.domain.Input;
 import hu.wirthandras.firefly.service.IGeneratorService;
 
 @Controller
